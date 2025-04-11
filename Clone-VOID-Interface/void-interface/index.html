@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOID Interface - Dashboard</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#6e2bf8">
+          <path d="M12 2.5L5.5 7v10l6.5 4.5 6.5-4.5V7L12 2.5zm4.5 13.3l-4.5 3.1-4.5-3.1V8.1l4.5-3.1 4.5 3.1v7.7z"/>
+        </svg>
+        <h1><span>VOID</span> Interface</h1>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="index.html" class="sidebar-link active">
+          <div class="icon" id="dashboard-icon"></div>
+          Dashboard
+        </a>
+        <a href="chat.html" class="sidebar-link">
+          <div class="icon" id="chat-icon"></div>
+          Chat
+        </a>
+        <a href="profile.html" class="sidebar-link">
+          <div class="icon" id="profile-icon"></div>
+          Profile
+        </a>
+        <a href="vox.html" class="sidebar-link">
+          <div class="icon" id="vox-icon"></div>
+          VOX
+        </a>
+        <a href="logs.html" class="sidebar-link">
+          <div class="icon" id="logs-icon"></div>
+          Logs
+        </a>
+        <a href="terminal.html" class="sidebar-link">
+          <div class="icon" id="terminal-icon"></div>
+          Terminal
+        </a>
+        <a href="user-management.html" class="sidebar-link">
+          <div class="icon" id="user-management-icon"></div>
+          User Management
+        </a>
+        <a href="settings.html" class="sidebar-link">
+          <div class="icon" id="settings-icon"></div>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar">D</div>
+        <div class="user-info">
+          <div class="username">DEBUG</div>
+          <div class="user-email">pik@pik.dk</div>
+        </div>
+        <div class="status-indicator"></div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="topbar">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="search-bar">
+          <div class="search-icon" id="search-icon"></div>
+          <input type="text" placeholder="Quick search...">
+        </div>
+
+        <div class="topbar-right">
+          <div class="command-palette">
+            <span>Command</span>
+            <span class="command-key">⌘K</span>
+          </div>
+
+          <div class="time-display">Sun, 6 Apr • 23.22</div>
+
+          <div class="notification-bell" id="notification-icon">
+            <div class="notification-badge"></div>
+          </div>
+
+          <div class="user-dropdown">U</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <h1 class="page-title">Dashboard</h1>
+        <p style="margin-bottom: 24px; color: var(--text-secondary);">Welcome to VOID Interface V2</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-title">Total Interactions</div>
+              <div class="stat-icon" id="interactions-icon"></div>
+            </div>
+            <div class="stat-value">2</div>
+            <div class="stat-chart" style="background: linear-gradient(to right, rgba(167, 139, 250, 0.1), rgba(167, 139, 250, 0.3)); border-radius: 4px; position: relative; overflow: hidden;">
+              <svg width="100%" height="100%" viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,30 L2,25 L4,28 L6,20 L8,22 L10,18 L12,15 L14,20 L16,18 L18,15 L20,13 L22,18 L24,20 L26,15 L28,10 L30,15 L32,18 L34,15 L36,12 L38,15 L40,18 L42,20 L44,18 L46,15 L48,12 L50,15 L52,18 L54,15 L56,10 L58,15 L60,18 L62,15 L64,10 L66,15 L68,18 L70,20 L72,15 L74,10 L76,15 L78,18 L80,20 L82,18 L84,15 L86,12 L88,15 L90,18 L92,15 L94,10 L96,15 L98,25 L100,15 L100,30 L0,30 Z" fill="rgba(167, 139, 250, 0.5)"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-title">Resources</div>
+              <div class="stat-icon" id="resources-icon"></div>
+            </div>
+            <div class="stat-value">5%</div>
+            <div class="stat-chart" style="background: linear-gradient(to right, rgba(56, 189, 248, 0.1), rgba(56, 189, 248, 0.3)); border-radius: 4px; position: relative; overflow: hidden;">
+              <svg width="100%" height="100%" viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,30 L2,15 L4,18 L6,20 L8,22 L10,18 L12,15 L14,20 L16,25 L18,15 L20,10 L22,15 L24,20 L26,25 L28,20 L30,15 L32,10 L34,15 L36,18 L38,15 L40,10 L42,15 L44,18 L46,20 L48,18 L50,15 L52,10 L54,15 L56,18 L58,20 L60,18 L62,15 L64,10 L66,15 L68,18 L70,22 L72,20 L74,15 L76,10 L78,15 L80,18 L82,20 L84,15 L86,10 L88,15 L90,20 L92,22 L94,20 L96,22 L98,20 L100,18 L100,30 L0,30 Z" fill="rgba(56, 189, 248, 0.5)"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-title">System Status</div>
+              <div class="stat-icon" id="status-icon"></div>
+            </div>
+            <div class="stat-value">Online</div>
+            <div style="display: flex; align-items: center; margin-top: 20px;">
+              <div style="width: 8px; height: 8px; background-color: var(--success); border-radius: 50%; margin-right: 8px;"></div>
+              <span style="font-size: 14px; color: var(--text-secondary);">All systems operational</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-title">Events</div>
+              <div class="stat-icon" id="events-icon"></div>
+            </div>
+            <div class="stat-value">2</div>
+            <div class="stat-chart" style="background: linear-gradient(to right, rgba(248, 113, 113, 0.1), rgba(248, 113, 113, 0.3)); border-radius: 4px; position: relative; overflow: hidden;">
+              <svg width="100%" height="100%" viewBox="0 0 100 30" preserveAspectRatio="none">
+                <path d="M0,30 L2,15 L4,18 L6,20 L8,22 L10,18 L12,15 L14,20 L16,18 L18,15 L20,10 L22,15 L24,20 L26,18 L28,15 L30,10 L32,15 L34,18 L36,20 L38,22 L40,25 L42,20 L44,15 L46,10 L48,15 L50,18 L52,20 L54,18 L56,15 L58,10 L60,15 L62,20 L64,22 L66,25 L68,20 L70,15 L72,10 L74,15 L76,20 L78,22 L80,25 L82,22 L84,18 L86,15 L88,10 L90,15 L92,20 L94,22 L96,25 L98,22 L100,18 L100,30 L0,30 Z" fill="rgba(248, 113, 113, 0.5)"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+          <div class="card">
+            <h2 class="card-title">Quick Actions</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+              <div style="padding-bottom: 16px; border-bottom: 2px solid #6e2bf8;">
+                <!-- Empty space for styling -->
+              </div>
+              <div style="padding-bottom: 16px; border-bottom: 2px solid #dc2626;">
+                <!-- Empty space for styling -->
+              </div>
+              <div style="padding-bottom: 16px; border-bottom: 2px solid #0ea5e9;">
+                <!-- Empty space for styling -->
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;">
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(110, 43, 248, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(110, 43, 248, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="authorize-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Authorize</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">Enable admin privileges</p>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(220, 38, 38, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(220, 38, 38, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="clear-logs-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Clear Logs</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">Delete all logs</p>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(14, 165, 233, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(14, 165, 233, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="change-model-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Change Model</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">Select AI model</p>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;">
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(234, 179, 8, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(234, 179, 8, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="send-message-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Send Message</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">Chat with AI</p>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(22, 163, 74, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(22, 163, 74, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="view-logs-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">View Logs</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">See interaction history</p>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16px; background: rgba(59, 130, 246, 0.1); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;" id="log-out-icon"></div>
+                <h3 style="font-size: 16px; margin-bottom: 8px;">Log Out</h3>
+                <p style="font-size: 12px; color: var(--text-secondary);">End your session</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h2 class="card-title">System Notifications</h2>
+
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: rgba(0, 0, 0, 0.2);">
+                  <div style="width: 4px; background-color: var(--success); border-radius: 2px;"></div>
+                  <div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">1 minute ago</div>
+                    <div style="display: inline-block; padding: 2px 8px; background: rgba(22, 163, 74, 0.2); color: var(--green-gauge); border-radius: 4px; font-size: 12px; margin-bottom: 4px;">SUCCESS</div>
+                    <div style="font-size: 14px;">Hello</div>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: rgba(0, 0, 0, 0.2);">
+                  <div style="width: 4px; background-color: var(--success); border-radius: 2px;"></div>
+                  <div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">2 minutes ago</div>
+                    <div style="display: inline-block; padding: 2px 8px; background: rgba(22, 163, 74, 0.2); color: var(--green-gauge); border-radius: 4px; font-size: 12px; margin-bottom: 4px;">SUCCESS</div>
+                    <div style="font-size: 14px;">Hi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2 class="card-title">Total Interactions</h2>
+              <!-- This would typically have more content -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">System Health</h2>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+            <div>
+              <div class="gauge" data-value="79">
+                <div class="gauge-bg"></div>
+                <div class="gauge-fill" style="background-color: var(--red-gauge);"></div>
+                <div class="gauge-text">79%</div>
+              </div>
+              <div style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-secondary);">CPU</div>
+            </div>
+
+            <div>
+              <div class="gauge" data-value="5">
+                <div class="gauge-bg"></div>
+                <div class="gauge-fill" style="background-color: var(--green-gauge);"></div>
+                <div class="gauge-text">5%</div>
+              </div>
+              <div style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-secondary);">RAM</div>
+            </div>
+
+            <div>
+              <div class="gauge" data-value="77">
+                <div class="gauge-bg"></div>
+                <div class="gauge-fill" style="background-color: var(--blue-gauge);"></div>
+                <div class="gauge-text">77%</div>
+              </div>
+              <div style="text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-secondary);">Disk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="src/js/icons.js"></script>
+  <script src="src/js/common.js"></script>
+  <script>
+    // Fill icon containers with SVG icons
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sidebar icons
+      document.getElementById('dashboard-icon').innerHTML = getIcon('dashboard');
+      document.getElementById('chat-icon').innerHTML = getIcon('chat');
+      document.getElementById('profile-icon').innerHTML = getIcon('profile');
+      document.getElementById('vox-icon').innerHTML = getIcon('vox');
+      document.getElementById('logs-icon').innerHTML = getIcon('logs');
+      document.getElementById('terminal-icon').innerHTML = getIcon('terminal');
+      document.getElementById('user-management-icon').innerHTML = getIcon('userManagement');
+      document.getElementById('settings-icon').innerHTML = getIcon('settings');
+
+      // Top bar icons
+      document.getElementById('search-icon').innerHTML = getIcon('search');
+      document.getElementById('notification-icon').innerHTML = getIcon('notification');
+
+      // Dashboard icons
+      document.getElementById('interactions-icon').innerHTML = getIcon('profile');
+      document.getElementById('resources-icon').innerHTML = getIcon('chart');
+      document.getElementById('status-icon').innerHTML = getIcon('check');
+      document.getElementById('events-icon').innerHTML = getIcon('notification');
+
+      // Quick actions icons
+      document.getElementById('authorize-icon').innerHTML = getIcon('authorize');
+      document.getElementById('clear-logs-icon').innerHTML = getIcon('clearLogs');
+      document.getElementById('change-model-icon').innerHTML = getIcon('changeModel');
+      document.getElementById('send-message-icon').innerHTML = getIcon('sendMessage');
+      document.getElementById('view-logs-icon').innerHTML = getIcon('viewLogs');
+      document.getElementById('log-out-icon').innerHTML = getIcon('logout');
+
+      // Initialize gauges
+      initGauges();
+
+      // Logout functionality
+      document.getElementById('log-out-icon').parentElement.addEventListener('click', function() {
+        window.location.href = 'login.html';
+      });
+    });
+  </script>
+</body>
+</html>
