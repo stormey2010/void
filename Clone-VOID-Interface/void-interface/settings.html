@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOID Interface - Settings</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#6e2bf8">
+          <path d="M12 2.5L5.5 7v10l6.5 4.5 6.5-4.5V7L12 2.5zm4.5 13.3l-4.5 3.1-4.5-3.1V8.1l4.5-3.1 4.5 3.1v7.7z"/>
+        </svg>
+        <h1><span>VOID</span> Interface</h1>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="index.html" class="sidebar-link">
+          <div class="icon" id="dashboard-icon"></div>
+          Dashboard
+        </a>
+        <a href="chat.html" class="sidebar-link">
+          <div class="icon" id="chat-icon"></div>
+          Chat
+        </a>
+        <a href="profile.html" class="sidebar-link">
+          <div class="icon" id="profile-icon"></div>
+          Profile
+        </a>
+        <a href="vox.html" class="sidebar-link">
+          <div class="icon" id="vox-icon"></div>
+          VOX
+        </a>
+        <a href="logs.html" class="sidebar-link">
+          <div class="icon" id="logs-icon"></div>
+          Logs
+        </a>
+        <a href="terminal.html" class="sidebar-link">
+          <div class="icon" id="terminal-icon"></div>
+          Terminal
+        </a>
+        <a href="user-management.html" class="sidebar-link">
+          <div class="icon" id="user-management-icon"></div>
+          User Management
+        </a>
+        <a href="settings.html" class="sidebar-link active">
+          <div class="icon" id="settings-icon"></div>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar">D</div>
+        <div class="user-info">
+          <div class="username">DEBUG</div>
+          <div class="user-email">pik@pik.dk</div>
+        </div>
+        <div class="status-indicator"></div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="topbar">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="search-bar">
+          <div class="search-icon" id="search-icon"></div>
+          <input type="text" placeholder="Quick search...">
+        </div>
+
+        <div class="topbar-right">
+          <div class="command-palette">
+            <span>Command</span>
+            <span class="command-key">⌘K</span>
+          </div>
+
+          <div class="time-display">Sun, 6 Apr • 23.23</div>
+
+          <div class="notification-bell" id="notification-icon">
+            <div class="notification-badge"></div>
+          </div>
+
+          <div class="user-dropdown">U</div>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <h1 class="page-title">Settings</h1>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="llm-providers">
+            <span id="llm-icon"></span>
+            LLM Providers
+          </button>
+          <button class="tab" data-tab="appearance">
+            <span id="appearance-icon"></span>
+            Appearance
+          </button>
+          <button class="tab" data-tab="notifications">
+            <span id="notifications-icon"></span>
+            Notifications
+          </button>
+          <button class="tab" data-tab="account">
+            <span id="account-icon"></span>
+            Account
+          </button>
+        </div>
+
+        <div class="tab-content" id="llm-providers">
+          <div class="card">
+            <h2 class="card-title">LLM Provider</h2>
+            <p class="card-subtitle">Select which AI provider you want to use for the chat interface. You'll need to provide your own API key.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 24px;">
+              <div style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px; background-color: rgba(110, 43, 248, 0.05);">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 40px; height: 40px; background-color: var(--surface); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                      <div id="openai-icon" style="font-size: 24px;">🧠</div>
+                    </div>
+                    <div>
+                      <h3 style="font-size: 16px; margin-bottom: 4px;">OpenAI</h3>
+                      <p style="font-size: 12px; color: var(--text-secondary);">Define the model powering your VOID-Instance.</p>
+                    </div>
+                  </div>
+                  <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center;" id="openai-check">
+                    <div id="check-icon"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 40px; height: 40px; background-color: var(--surface); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                      <div id="google-icon" style="font-size: 24px;">G</div>
+                    </div>
+                    <div>
+                      <h3 style="font-size: 16px; margin-bottom: 4px;">Google <span style="font-size: 10px; background-color: var(--surface-hover); padding: 2px 6px; border-radius: 4px;">Coming Soon</span></h3>
+                      <p style="font-size: 12px; color: var(--text-secondary);">Access PaLM and Gemini models through Google AI.</p>
+                    </div>
+                  </div>
+                  <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--text-secondary); display: flex; align-items: center; justify-content: center;"></div>
+                </div>
+              </div>
+
+              <div style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 40px; height: 40px; background-color: var(--surface); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                      <div id="mistral-icon" style="font-size: 24px;">M</div>
+                    </div>
+                    <div>
+                      <h3 style="font-size: 16px; margin-bottom: 4px;">Mistral AI <span style="font-size: 10px; background-color: var(--surface-hover); padding: 2px 6px; border-radius: 4px;">Coming Soon</span></h3>
+                      <p style="font-size: 12px; color: var(--text-secondary);">Cutting-edge open-weight models for various tasks.</p>
+                    </div>
+                  </div>
+                  <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--text-secondary); display: flex; align-items: center; justify-content: center;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <label style="display: block; font-size: 14px; margin-bottom: 8px;">API Key for OpenAI</label>
+              <input type="password" value="••••••••••••••••••••••••••••••••••••••••••••" style="font-family: monospace;">
+              <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">Your API key is stored locally and never sent to our servers.</p>
+            </div>
+
+            <details style="margin-top: 24px; color: var(--text-secondary);">
+              <summary style="cursor: pointer; font-size: 14px; color: var(--primary);">Advanced Settings</summary>
+              <div style="margin-top: 16px; padding: 16px; background-color: var(--surface-hover); border-radius: 8px;">
+                <p>Advanced configuration options will be available in future updates.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="tab-content" id="appearance" style="display: none;">
+          <!-- Appearance tab content -->
+          <div class="card">
+            <h2 class="card-title">Appearance</h2>
+            <p class="card-subtitle">Customize the look and feel of your VOID Interface.</p>
+
+            <div style="margin-top: 24px;">
+              <h3 style="font-size: 16px; margin-bottom: 16px;">Theme</h3>
+              <div style="display: flex; gap: 16px;">
+                <div style="border: 2px solid var(--primary); padding: 12px; border-radius: 8px; width: 100px; text-align: center; cursor: pointer;">
+                  <div style="height: 60px; background-color: black; border-radius: 4px; margin-bottom: 8px;"></div>
+                  <div>Dark</div>
+                </div>
+                <div style="border: 2px solid transparent; padding: 12px; border-radius: 8px; width: 100px; text-align: center; cursor: pointer;">
+                  <div style="height: 60px; background-color: white; border-radius: 4px; margin-bottom: 8px;"></div>
+                  <div>Light</div>
+                </div>
+                <div style="border: 2px solid transparent; padding: 12px; border-radius: 8px; width: 100px; text-align: center; cursor: pointer;">
+                  <div style="height: 60px; background: linear-gradient(to right, black 50%, white 50%); border-radius: 4px; margin-bottom: 8px;"></div>
+                  <div>System</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="notifications" style="display: none;">
+          <!-- Notifications tab content -->
+          <div class="card">
+            <h2 class="card-title">Notifications</h2>
+            <p class="card-subtitle">Manage your notification preferences.</p>
+
+            <div style="margin-top: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                <div>
+                  <h3 style="font-size: 16px; margin-bottom: 4px;">System Notifications</h3>
+                  <p style="font-size: 14px; color: var(--text-secondary);">Receive notifications about system events</p>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="account" style="display: none;">
+          <!-- Account tab content -->
+          <div class="card">
+            <h2 class="card-title">Account</h2>
+            <p class="card-subtitle">Manage your account settings.</p>
+
+            <div style="margin-top: 24px;">
+              <h3 style="font-size: 16px; margin-bottom: 16px;">Profile Information</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                  <label style="display: block; font-size: 14px; margin-bottom: 8px;">Username</label>
+                  <input type="text" value="DEBUG">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 14px; margin-bottom: 8px;">Email</label>
+                  <input type="email" value="pik@pik.dk">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 16px 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: flex-end;">
+        <button class="btn btn-primary">Save Settings</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="src/js/icons.js"></script>
+  <script src="src/js/common.js"></script>
+  <script>
+    // Fill icon containers with SVG icons
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sidebar icons
+      document.getElementById('dashboard-icon').innerHTML = getIcon('dashboard');
+      document.getElementById('chat-icon').innerHTML = getIcon('chat');
+      document.getElementById('profile-icon').innerHTML = getIcon('profile');
+      document.getElementById('vox-icon').innerHTML = getIcon('vox');
+      document.getElementById('logs-icon').innerHTML = getIcon('logs');
+      document.getElementById('terminal-icon').innerHTML = getIcon('terminal');
+      document.getElementById('user-management-icon').innerHTML = getIcon('userManagement');
+      document.getElementById('settings-icon').innerHTML = getIcon('settings');
+
+      // Top bar icons
+      document.getElementById('search-icon').innerHTML = getIcon('search');
+      document.getElementById('notification-icon').innerHTML = getIcon('notification');
+
+      // Tab icons
+      document.getElementById('llm-icon').innerHTML = getIcon('chat');
+      document.getElementById('appearance-icon').innerHTML = getIcon('settings');
+      document.getElementById('notifications-icon').innerHTML = getIcon('notification');
+      document.getElementById('account-icon').innerHTML = getIcon('profile');
+
+      // Settings icons
+      document.getElementById('check-icon').innerHTML = getIcon('check');
+
+      // Setup tabs
+      setupTabs();
+    });
+  </script>
+
+  <style>
+    /* Switch - Toggle button */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--surface-hover);
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</body>
+</html>
